@@ -1,3 +1,7 @@
+## 0.1.0
+
+## Enhancements
+
 ## 0.0.0
 
 ### Initial Setup
