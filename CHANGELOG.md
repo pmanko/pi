@@ -2,6 +2,9 @@
 
 ## Enhancements
 
+## Frontend Changes
+- Switched Framework to Bootstrap 3
+
 ## 0.0.0
 
 ### Initial Setup

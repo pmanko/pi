@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pi</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= [@title, Contour.application_name].compact.join(' - ').html_safe %></title>
+  <%= favicon_link_tag %>
   <%= csrf_meta_tags %>
+
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 </head>
 <body>
 
-<%= yield %>
+<%= render partial: 'layouts/menu' %>
 
+<div class="container main-container">
+  <%= yield %>
+</div>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
 </body>
 </html>
