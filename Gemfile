@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Contour
-gem "contour", "~> 2.1.0.beta6"
+gem "contour", "~> 2.1.0.beta10"
 gem 'kaminari',             '~> 0.14.1'
 gem 'ruby-ntlm-namespace',  '~> 0.0.1'
 

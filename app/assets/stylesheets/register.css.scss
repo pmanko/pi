@@ -1,7 +1,43 @@
-#reasons .item img {
+#reason-carousel .item img {
 
 }
 
+#highlights {
+  #join-us {
+    .floater {
+      display: none;
+    }
+    a {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #highlights {
+    position: relative;
+
+    #join-us {
+      position: absolute;
+      right: 0;
+      height: 100%;
+
+      .floater{
+        float: left;
+        height: 50%;
+        margin-bottom: -19px;
+      }
+
+      a {
+        margin: 0;
+        clear: left;
+      }
+    }
+  }
+}
+
+
+
 #join-us {
-  padding: 200px 30px;
+
 }
