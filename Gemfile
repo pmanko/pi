@@ -28,10 +28,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Contour
-gem "contour", "~> 2.1.0.beta10"
+gem "contour", "~> 2.1.0.beta16"
 gem 'kaminari',             '~> 0.14.1'
 gem 'ruby-ntlm-namespace',  '~> 0.0.1'
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

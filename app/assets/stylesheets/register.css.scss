@@ -1,9 +1,9 @@
-#reason-carousel .item img {
-
-}
 
 #highlights {
   #join-us {
+    form {
+      padding: 0 15px;
+    }
     .floater {
       display: none;
     }
@@ -13,11 +13,26 @@
   }
 }
 
+
+
+#reason-carousel {
+  //width: 400px;
+}
+
+@media (min-width: 768px) {
+
+}
+
 @media (min-width: 992px) {
+
+}
+
+
+@media (min-width: 1200px) {
   #highlights {
     position: relative;
 
-    #join-us {
+    .link {
       position: absolute;
       right: 0;
       height: 100%;
@@ -34,10 +49,4 @@
       }
     }
   }
-}
-
-
-
-#join-us {
-
 }
