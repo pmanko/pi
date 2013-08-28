@@ -1,0 +1,17 @@
+<div class="form-errors">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" href="#errorList">
+          <i class="indicator glyphicon glyphicon-plus"></i>
+          <%= sentence %>
+        </a>
+      </h4>
+    </div>
+    <div id="errorList" class="panel-collapse collapse">
+      <div class="panel-body text-danger">
+        <ul><%= messages.map { |msg| content_tag(:li, msg) }.join.html_safe %></ul>
+      </div>
+    </div>
+  </div>
+</div>

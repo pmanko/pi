@@ -18,6 +18,7 @@ files = [
           ['config/initializers', 'devise.rb'],
           ['config/initializers', 'omniauth.rb'],
         ]
+
 files.each do |folder_name, file_name|
   file_template = File.join(template_folder, file_name + '.erb')
   file_original = File.join(root_folder, folder_name, file_name)

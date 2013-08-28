@@ -6,4 +6,5 @@
  *= require bootstrap/v3.0.0/bootstrap
  *= require bootstrap/bs-callout
  *= require glyphicons-overrides
+ *= require contour/errors
 */

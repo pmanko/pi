@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Contour
-gem "contour", "~> 2.1.0.beta16"
+gem "contour", "~> 2.1.0.beta17"
 gem 'kaminari',             '~> 0.14.1'
 gem 'ruby-ntlm-namespace',  '~> 0.0.1'
 
@@ -43,6 +43,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'poltergeist'
+end
+
+# Development
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 gem 'simplecov', :require => false, :group => :test
