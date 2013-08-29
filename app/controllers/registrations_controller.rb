@@ -4,6 +4,8 @@ class RegistrationsController < Devise::RegistrationsController
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
 
+  before_filter :configure_permitted_parameters
+
   def new
     build_resource({})
     respond_with self.resource
@@ -31,6 +33,11 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
 
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:password, :password_confirmation, :email, :first_name, :last_name) }
+  end
 
 
 end
