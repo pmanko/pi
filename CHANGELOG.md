@@ -1,3 +1,12 @@
+## 0.2.0
+
+## Enhancements
+
+## Gem Changes
+- Removed Contour dependency (for now)
+- Using Devise 3.1
+- Using rails-less-bootstrap for future flexibility with styles.
+
 ## 0.1.0
 
 ## Enhancements

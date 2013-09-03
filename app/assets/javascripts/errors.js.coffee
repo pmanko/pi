@@ -1,5 +1,5 @@
 $.fn.toggleErrors = (e) ->
-  $(e.target).prev(".panel-heading").find("i.indicator").toggleClass "glyphicon-plus glyphicon-minus"
+  $(e.target).prev("h4").find("i.indicator").toggleClass "glyphicon-plus glyphicon-minus"
 
 $ ->
   $(document).on('hidden.bs.collapse', '#errorList', $.fn.toggleErrors)
