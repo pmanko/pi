@@ -28,7 +28,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Bootstrap
-gem 'less-rails'
+gem 'less-rails', platforms: :ruby
+
+# High Charts
+gem 'highcharts-rails'
+
 
 # Contour
 #gem "contour", "~> 2.1.0.rc"

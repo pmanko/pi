@@ -1,36 +1,86 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1><%= @name %></h1>
+<div id="patient-profile">
+    <div class="jumbotron">
+      <div class="container">
+        <h1><%= @name %></h1>
+      </div>
+    </div>
 
-    <ul class="nav nav-pills">
-      <li class=""><a href="#">Basic Information</a></li>
-      <li><a href="#">Labs & Measurements</a></li>
-      <li><a href="#">Medical Record</a></li>
-      <li><a href="#">Surveys</a></li>
-      <li><a href="#">Connections</a></li>
-    </ul>
-  </div>
-</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="">
+            <ul class="nav sidebar">
+              <li class=""><a href="#">Basic Information</a></li>
+              <li><a href="#">Labs & Measurements</a></li>
+              <li><a href="#">Medical Record</a></li>
+              <li><a href="#">Surveys</a></li>
+              <li><a href="#">Connections</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="basic-info">
+            <div class="page-header">
+              <h2>Basic Information</h2>
+            </div>
+            <div class="row">
 
-<div>
-  <div id="basic-info">
+            </div>
 
-  </div>
+          </div>
 
-  <div id="labs-measurements">
+          <div id="labs-measurements">
+            <div class="page-header">
+              <h2>Measurements & Labs</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <ul>
+                  <li>Sleep Diary</li>
+                  <li>Heigh</li>
+                  <li>Weight</li>
+                </ul>
+              </div>
 
-  </div>
+              <div id="chart" class="col-md-7">
 
-  <div id="medical-record">
+              </div>
+              <div class="col-md-3">
 
-  </div>
+              </div>
+            </div>
+          </div>
 
-  <div id="surveys">
+          <div id="medical-record">
+            <div class="page-header">
+              <h2>Medical Record</h2>
+            </div>
+            <div class="row">
 
-  </div>
+            </div>
+          </div>
 
-  <div id="connections">
+          <div id="surveys">
+            <div class="page-header">
+              <h2>Surveys</h2>
+            </div>
+            <div class="row">
 
-  </div>
+            </div>
+          </div>
 
+          <div id="connections">
+            <div class="page-header">
+              <h2>Connections</h2>
+              <button class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Sharing Settings</button>
+            </div>
+
+            <div class="row">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
