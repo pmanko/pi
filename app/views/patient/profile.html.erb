@@ -21,7 +21,7 @@
         <div class="col-md-9">
           <div id="basic-info">
             <div class="page-header">
-              <h2>Basic Information</h2>
+              <h2><span>Basic Information</span><button class="btn btn-link pull-right"><span class="glyphicon glyphicon-edit"></span>edit</button></h2>
             </div>
             <div class="row">
 
@@ -34,49 +34,100 @@
               <h2>Measurements & Labs</h2>
             </div>
             <div class="row">
-              <div class="col-md-2">
-                <ul>
-                  <li>Sleep Diary</li>
-                  <li>Heigh</li>
-                  <li>Weight</li>
-                </ul>
-              </div>
-
-              <div id="chart" class="col-md-7">
-
-              </div>
               <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a>Sleep Diary</a></li>
+                  <li><a>Heigh</a></li>
+                  <li><a>Weight</a></li>
+                </ul>
+
+                <a href="#"><span class="glyphicon glyphicon-plus"></span>add new measurement</a>
+              </div>
+
+              <div id="chart" class="col-md-9">
 
               </div>
+
             </div>
           </div>
 
           <div id="medical-record">
             <div class="page-header">
-              <h2>Medical Record</h2>
+              <h2><span>Medical Record</span><button class="btn btn-link pull-right"><span class="glyphicon glyphicon-edit"></span>edit</button></h2>
             </div>
             <div class="row">
 
             </div>
           </div>
 
-          <div id="surveys">
+          <div id="surveys-questionnaires">
             <div class="page-header">
-              <h2>Surveys</h2>
+              <h2>Surveys & Questionnaires</h2>
             </div>
             <div class="row">
+              <div class="col-md-6">
+                <h3>Assigned</h3>
+
+              </div>
+              <div class="col-md-6">
+                <h3>Completed</h3>
+
+              </div>
 
             </div>
           </div>
 
           <div id="connections">
             <div class="page-header">
-              <h2>Connections</h2>
-              <button class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Sharing Settings</button>
+              <h2>
+                <span>Connections</span>
+                <button class="btn btn-sm btn-primary pull-right"><span class="glyphicon glyphicon-lock"></span>Sharing Settings</button>
+              </h2>
+
+
             </div>
 
             <div class="row">
 
+              <div class="connection col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Connected Device</div>
+                  <div class="panel-body">
+
+                  </div>
+                </div>
+              </div>
+              <div class="connection col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Connected App</div>
+                  <div class="panel-body">
+
+                  </div>
+                </div>
+              </div>
+              <div class="connection col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Connected Website</div>
+                  <div class="panel-body">
+
+                  </div>
+                </div>
+              </div>
+              <div class="connection col-md-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Connected Device</div>
+                  <div class="panel-body">
+
+                  </div>
+                </div>
+              </div>
+              <div class="connection col-md-4">
+                <div class="panel panel-info">
+                  <div class="panel-body">
+                    <a href="#"><span class="glyphicon glyphicon-plus"></span>Add New</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
