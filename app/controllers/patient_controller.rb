@@ -1,6 +1,6 @@
 class PatientController < ApplicationController
   def profile
-    @name ="Michael Cambell"
+    @name ="John Smith"
 
 
   end
