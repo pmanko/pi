@@ -16,7 +16,6 @@
 //= require dist/js/bootstrap.min
 //= require highcharts
 //= require highcharts/highcharts-more
-//= require highcharts/modules/canvas-tools
 //= require highcharts/modules/data
 //= require highcharts/modules/exporting
 //= require_tree .
