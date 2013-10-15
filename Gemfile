@@ -56,6 +56,8 @@ end
 # Development
 group :development do
   gem "better_errors"
+  gem "database_cleaner"
+  gem "meta_request"
   gem "binding_of_caller"
 end
 

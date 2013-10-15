@@ -31,7 +31,7 @@ describe "Registers new user" do
     click_on "Sign up"
 
     expect(page).to have_content "Thank you for signing up!"
-    expect(page).to have_content "Before signing in you must verify your account."
+    expect(page).to have_content "Before your account becomes active, you will have to confirm your email address using the link provided."
 
 
   end

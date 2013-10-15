@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsController
+class Auth::RegistrationsController < Devise::RegistrationsController
   respond_to :html, :js
 
   prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
@@ -7,6 +7,8 @@ class RegistrationsController < Devise::RegistrationsController
   before_filter :configure_permitted_parameters
 
   def new
+    MY_LOG.info "NEW"
+    @skip_intro = params[:skip_intro] ? true : false
     build_resource({})
     respond_with self.resource
   end
@@ -14,6 +16,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    MY_LOG.info "CREATE"
     build_resource(sign_up_params)
 
     if resource.save
@@ -28,7 +31,7 @@ class RegistrationsController < Devise::RegistrationsController
         respond_with resource, :location => after_inactive_sign_up_path_for(resource)
       end
     else
-      MY_LOG.info "Not Saved!"
+      MY_LOG.info "Not Saved! #{resource.errors.full_messages}"
       clean_up_passwords resource
       respond_with resource
     end
@@ -36,6 +39,7 @@ class RegistrationsController < Devise::RegistrationsController
 
 
   protected
+
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:password, :password_confirmation, :email, :first_name, :last_name) }

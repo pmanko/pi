@@ -1,1 +1,5 @@
-$("#join-us").removeClass("link").html("<%= j render partial: "form" %>");
+<% if resource.new_record? %>
+  $("#join-us").removeClass("link").html("<%= j render partial: "form" %>");
+<% else %>
+  $("#join-us").removeClass("link").html("<%= j render partial: "success" %>");
+<% end %>

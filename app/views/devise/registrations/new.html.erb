@@ -63,8 +63,12 @@
 
 
     </div>
-    <div id="join-us" class="col-lg-6 link">
-      <%=  render partial: "join" %>
+    <div id="join-us" class="col-lg-6 <%= @skip_intro ? nil : "link" %>">
+      <% if @skip_intro %>
+        <%= render partial: "form" %>
+      <% else %>
+        <%=  render partial: "join" %>
+      <% end %>
     </div>
   </div>
 

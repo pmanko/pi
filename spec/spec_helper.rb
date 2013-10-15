@@ -1,4 +1,6 @@
 require 'simplecov'
+require 'database_cleaner'
+
 SimpleCov.start
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -10,6 +12,10 @@ require 'rspec/autorun'
 # Capybara + Poltergeist for Feature Specs
 require 'capybara/rspec'
 require 'capybara/poltergeist'
+
+# Transactional fixtures do not work with Selenium tests, because Capybara
+# uses a separate server thread, which the transactions would be hidden
+# from. We hence use DatabaseCleaner to truncate our test database.
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -40,10 +46,23 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
