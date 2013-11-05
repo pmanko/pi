@@ -6,7 +6,11 @@ describe "Signs in user" do
     password = "mypassword11"
     user = create(:confirmed_user, password: password)
 
+    #expect(User.confirm_by_token(user.confirmation_token)).to be_true
+
     expect(user.valid_password?(password)).to be_true
+    expect(user).to be_confirmed
+    expect(user).to be_persisted
 
     visit new_user_session_path
 
@@ -21,6 +25,8 @@ describe "Signs in user" do
 
     page.save_screenshot("spec/screenshots/3.png")
 
+
+    expect(User.count).to be > 0
     expect(page).to have_content user.full_name
 
 

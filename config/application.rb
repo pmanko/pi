@@ -21,6 +21,6 @@ module Pi
     # config.i18n.default_locale = :de
 
     # Bootstrap
-    config.assets.paths << "#{Rails.root}/vendor/assets/bootstrap/dist"
+    config.assets.paths << "#{Rails.root}/vendor/assets"
   end
 end

@@ -10,7 +10,9 @@ FactoryGirl.define do
     end
 
     factory :confirmed_user do
-      after(:create) {|user| User.confirm_by_token(user.confirmation_token)}
+      after(:create) do |user|
+        user.confirm!
+      end
     end
   end
 

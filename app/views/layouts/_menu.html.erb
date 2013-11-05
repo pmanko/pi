@@ -34,7 +34,7 @@
         <% if user_signed_in?  %>
               <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="#"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+              <li><a href="<%= destroy_user_session_path %>"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
         <% else %>
           <%= render partial: "devise/sessions/sign_in" %>
         <% end %>
