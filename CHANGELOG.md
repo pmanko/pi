@@ -1,18 +1,19 @@
-## 0.2.0
-
-## Enhancements
-
-## Gem Changes
-- Removed Contour dependency (for now)
-- Using Devise 3.1
-- Using rails-less-bootstrap for future flexibility with styles.
-
 ## 0.1.0
 
 ## Enhancements
 
+## Patient interface
+- Registration
+- Login
+- Profile Page (layout)
+
 ## Frontend Changes
 - Switched Framework to Bootstrap 3
+
+## Gem Changes
+- Removed Contour dependency
+- Using Devise 3.1
+- Rspec testing set up
 
 ## 0.0.0
 
