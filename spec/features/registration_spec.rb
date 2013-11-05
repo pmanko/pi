@@ -13,11 +13,7 @@ describe "Registers new user" do
 
     click_on "Join Now!"
 
-    page.save_screenshot("spec/screenshots/1.png")
-
     expect(page).to have_selector "form#new_user"
-
-    page.save_screenshot("spec/screenshots/2.png")
 
     fill_in("First name", with: u.first_name)
     fill_in("Last name", with: u.last_name)
@@ -26,14 +22,12 @@ describe "Registers new user" do
     fill_in("Email", with: u.email)
     fill_in("Email confirmation", with: u.email)
 
-    page.save_screenshot("spec/screenshots/3.png")
-
     click_on "Sign up"
+
+    expect(page).not_to have_selector "form#new_user"
 
     expect(page).to have_content "Thank you for signing up!"
     expect(page).to have_content "Before your account becomes active, you will have to confirm your email address using the link provided."
-
-
   end
 end
 

@@ -15,6 +15,9 @@
 /log/*.log
 /tmp
 
+# Ignore screenshots
+/spec/screenshots/*.png
+
 
 # Ignore RubyMine
 .idea

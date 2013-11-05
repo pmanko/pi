@@ -12,7 +12,7 @@ Pi::Application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  get "users/:name/profile" => 'patient#profile', as: :user_root
+  get "users/:name/profile" => 'patient#profile', as: :patient_profile
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
