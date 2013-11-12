@@ -8,13 +8,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <div class="">
+          <div class="affix" data-offset-top="200">
             <ul class="nav sidebar">
-              <li class="active"><a href="#">Basic Information</a></li>
-              <li><a href="#">Labs & Measurements</a></li>
-              <li><a href="#">Medical Record</a></li>
-              <li><a href="#">Surveys</a></li>
-              <li><a href="#">Connections</a></li>
+              <li class="active"><a href="">Basic Information</a></li>
+              <li><a href="">Labs & Measurements</a></li>
+              <li><a href="#medical-record">Medical Record</a></li>
+              <li><a href="">Surveys</a></li>
+              <li><a href="">Connections</a></li>
             </ul>
           </div>
         </div>
@@ -30,7 +30,7 @@
                   <tbody>
                     <tr>
                       <th>Email</th>
-                      <td>john.smith@example.com</td>
+                      <td><%= current_user.email %></td>
                     </tr>
                   </tbody>
                 </table>
