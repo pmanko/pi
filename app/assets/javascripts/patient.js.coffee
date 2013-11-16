@@ -3,6 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
+  $('body').scrollspy({ target: '#profile-nav', offset: 0 })
+
+  # Fix for anchor offset problems caused by the fixed main navbar
+  $("#profile-nav .nav a[href!=#]").each ->
+    $($(this).attr("href")).css("padding-top", "50px").prev().css "margin-bottom", "-50px"
+
+  # Highcharts
   if $("#chart").length > 0
     $("#chart").highcharts
       chart:
