@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -36,7 +36,7 @@ gem 'highcharts-rails'
 
 # Contour
 #gem "contour", "~> 2.1.0.rc"
-gem 'devise', '~> 3.1.0.rc2'
+gem 'devise', '~> 3.2.2'
 gem 'kaminari',             '~> 0.14.1'
 gem 'ruby-ntlm-namespace',  '~> 0.0.1'
 

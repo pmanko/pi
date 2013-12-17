@@ -10,18 +10,20 @@ class ApplicationController < ActionController::Base
   end
 
   def send_message(service, form_data = {}, method = "get", limit = 1, service_url = '')
-    return { result: '', error: 'No Task Tracker URL provided' } if false #if .blank? or TT_EMAIL.blank? or TT_PASSWORD.blank?
-    error = ''
-    data = ''
-    response = ''
-    return { result: data, error: 'HTTP redirect too deep' } if limit < 0
+#    return { result: '', error: 'No URL provided' } if false #if .blank? or TT_EMAIL.blank? or TT_PASSWORD.blank?
+#    error = ''
+#    data = ''
+#    response = ''
+#    return { result: data, error: 'HTTP redirect too deep' } if limit < 0
 
-    t_msg_start = Time.now
+#    t_msg_start = Time.now
 
-    service_url = "#{}/#{service}" if service_url.blank?
+#    service_url = "#{}/#{service}" if service_url.blank?
+
+
 
     begin
-      url = URI.parse(service_url)
+      url = URI.parse("https://sleepepi.partners.org/edge/pi")
       use_secure = (url.scheme == 'https')
 
       https = Net::HTTP.new(url.host, url.port)
@@ -30,7 +32,7 @@ class ApplicationController < ActionController::Base
       https.use_ssl = true if use_secure
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE if use_secure
 
-      headers = { 'Content-Type' => 'text/html', 'WWW-Authenticate' => 'Basic realm="Application"', 'Authorization' => "Basic #{Base64.strict_encode64("#{}:#{}")}" }
+      headers = { 'Content-Type' => 'text/html', 'WWW-Authenticate' => 'Basic realm="Application"', 'Authorization' => "Basic #{Base64.strict_encode64("pi.dev.sleepepi@gmail.com:sleepepi")}" }
 
       url = URI.parse(service_url)
       req = if method == "post"

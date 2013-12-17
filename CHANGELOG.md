@@ -1,19 +1,23 @@
 ## 0.2.0
+- Updated Ruby to 2.0.0-p353
 
+### Gem Changes
+- Updated Devise to 3.2.2
+- Updated Rails to 4.0.2
 
 ## 0.1.0
 
-## Enhancements
+### Enhancements
 
-## Patient interface
+### Patient interface
 - Registration
 - Login
 - Profile Page (layout)
 
-## Frontend Changes
+### Frontend Changes
 - Switched Framework to Bootstrap 3
 
-## Gem Changes
+### Gem Changes
 - Removed Contour dependency
 - Using Devise 3.1
 - Rspec testing set up
