@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0.2'
 
 # Bootstrap
 gem 'less-rails', platforms: :ruby
@@ -37,7 +37,7 @@ gem 'highcharts-rails'
 # Contour
 #gem "contour", "~> 2.1.0.rc"
 gem 'devise', '~> 3.2.2'
-gem 'kaminari',             '~> 0.14.1'
+gem 'kaminari',             '~> 0.15.0'
 gem 'ruby-ntlm-namespace',  '~> 0.0.1'
 
 group :doc do

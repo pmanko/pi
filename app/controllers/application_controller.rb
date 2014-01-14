@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
 #    service_url = "#{}/#{service}" if service_url.blank?
 
 
+=begin
 
     begin
       url = URI.parse("https://sleepepi.partners.org/edge/pi")
@@ -62,5 +63,7 @@ class ApplicationController < ActionController::Base
     end
 
     { result: data, error: error }
+=end
   end
+
 end

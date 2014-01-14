@@ -30,20 +30,12 @@ describe "Signs in user" do
 
     click_link "user-menu-dropdown"
 
-    page.save_screenshot("spec/screenshots/1.png")
-
     fill_in("Email address", with: @user.email)
     fill_in("Password", with: @password)
 
-    page.save_screenshot("spec/screenshots/2.png")
-
     click_on "Sign in"
-
-    page.save_screenshot("spec/screenshots/3.png")
 
     expect(User.count).to be > 0
     expect(page).to have_content @user.full_name
-
-
   end
 end

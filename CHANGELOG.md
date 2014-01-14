@@ -1,9 +1,17 @@
 ## 0.2.0
-- Updated Ruby to 2.0.0-p353
+- Updated Ruby to 2.1.0
 
 ### Gem Changes
 - Updated Devise to 3.2.2
 - Updated Rails to 4.0.2
+- Updated Kaminari and Jbuilder
+
+### Enhancements
+- Began Slice form integration
+
+### Bug Fixes
+- Fixed routing problems
+- Began fixing affix and scrollspy problems
 
 ## 0.1.0
 
