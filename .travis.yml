@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.1.0
+before_install:
+  - "gem install bundler --version 1.5.0 --no-ri --no-rdoc"
 before_script:
   - "ruby lib/initial_setup.rb ../.travis_setup"
   - psql -c 'create database rely_test;' -U postgres
