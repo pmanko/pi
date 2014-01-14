@@ -1,3 +1,6 @@
+## 0.2.1
+- Fixed readme
+
 ## 0.2.0
 - Updated Ruby to 2.1.0
 
