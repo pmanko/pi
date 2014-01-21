@@ -1,3 +1,6 @@
+## 0.3.0
+- Updated Readme and added License for 2014
+
 ## 0.2.1
 - Fixed readme
 

@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+@PatientReady ->
   $('body').scrollspy({ target: '#profile-nav', offset: 0 })
 
   # Fix for anchor offset problems caused by the fixed main navbar
